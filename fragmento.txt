@@ -646,12 +646,12 @@ a{text-decoration:none;color:inherit}
 <h2 class="fl-sec-h2">Una biblioteca creativa per accogliere ed esprimere meglio le tue emozioni</h2>
 <p class="fl-sec-sub">Il Manuale di Arteterapia riunisce attività, risorse e guide pratiche per creare il tuo spazio di espressione emotiva — per te, o per le persone che accompagni. Nessuna esperienza richiesta.</p>
 <div class="fl-stats-grid">
-<div class="fl-stat-card"><span class="fl-stat-icon">🎨</span><span class="fl-stat-num" data-prefix="+" data-target="100">0</span><span class="fl-stat-lbl">Attività</span></div>
-<div class="fl-stat-card"><span class="fl-stat-icon">🎁</span><span class="fl-stat-num" data-target="6">0</span><span class="fl-stat-lbl">Bonus inclusi</span></div>
-<div class="fl-stat-card"><span class="fl-stat-icon">✨</span><span class="fl-stat-num" data-prefix="+" data-target="150">0</span><span class="fl-stat-lbl">Esercizi supplementari</span></div>
-<div class="fl-stat-card"><span class="fl-stat-icon">⭐</span><span class="fl-stat-num" data-decimal="true" data-target="49">0</span><div class="fl-stat-stars">★★★★★</div><span class="fl-stat-lbl">Voto /5</span></div>
-<div class="fl-stat-card"><span class="fl-stat-icon">📩</span><span class="fl-stat-num" data-target="1">0</span><span class="fl-stat-lbl">Accesso immediato</span></div>
-<div class="fl-stat-card"><span class="fl-stat-icon">🛡️</span><span class="fl-stat-num" data-target="30">0</span><span class="fl-stat-lbl">Giorni di garanzia</span></div>
+<div class="fl-stat-card"><span class="fl-stat-icon">🎨</span><span class="fl-stat-num" data-prefix="+" data-target="100">+100</span><span class="fl-stat-lbl">Attività</span></div>
+<div class="fl-stat-card"><span class="fl-stat-icon">🎁</span><span class="fl-stat-num" data-target="6">6</span><span class="fl-stat-lbl">Bonus inclusi</span></div>
+<div class="fl-stat-card"><span class="fl-stat-icon">✨</span><span class="fl-stat-num" data-prefix="+" data-target="150">+150</span><span class="fl-stat-lbl">Esercizi supplementari</span></div>
+<div class="fl-stat-card"><span class="fl-stat-icon">⭐</span><span class="fl-stat-num" data-decimal="true" data-target="49">4.9</span><div class="fl-stat-stars">★★★★★</div><span class="fl-stat-lbl">Voto /5</span></div>
+<div class="fl-stat-card"><span class="fl-stat-icon">📩</span><span class="fl-stat-num" data-target="1">1</span><span class="fl-stat-lbl">Accesso immediato</span></div>
+<div class="fl-stat-card"><span class="fl-stat-icon">📱</span><span class="fl-stat-num">PDF</span><span class="fl-stat-lbl">Da leggere su schermo</span></div>
 </div>
 </div>
 </section>
@@ -858,7 +858,7 @@ a{text-decoration:none;color:inherit}
 <!-- GARANTÍA -->
 <section class="fl-garantia">
 <div class="fl-garantia-inner">
-<div class="fl-garantia-icon"><img alt="Garanzia soddisfatti o rimborsati di 30 giorni" decoding="async" loading="lazy" src="https://files.catbox.moe/5dusfc.png"/></div>
+<div class="fl-garantia-icon"><img alt="Garanzia soddisfatti o rimborsati di 30 giorni" decoding="async" loading="lazy" src="https://files.catbox.moe/r2kii1.png"/></div>
 <h3 class="fl-garantia-h3">Garanzia soddisfatti o rimborsati di 30 giorni</h3>
 <p class="fl-garantia-p">Ricevi immediatamente l'accesso al contenuto via e-mail, lo scarichi sul tuo dispositivo e puoi provare le prime attività tranquillamente a casa tua. Se ritieni che il contenuto non corrisponda alle tue aspettative, puoi richiedere un rimborso entro 30 giorni dall'acquisto. <strong>L'obiettivo è semplice: offrirti un supporto chiaro per esprimerti, placare il flusso dei pensieri e concederti un vero momento per te.</strong></p>
 </div>
@@ -1033,7 +1033,9 @@ document.querySelectorAll('.fl-modal').forEach(function(m){
 var heroVid = document.querySelector('.hero-video');
 if(heroVid){
   heroVid.addEventListener('loadeddata', function(){ heroVid.classList.add('fl-video-ready'); });
+  heroVid.addEventListener('playing', function(){ heroVid.classList.add('fl-video-ready'); });
   if(heroVid.readyState >= 2){ heroVid.classList.add('fl-video-ready'); }
+  setTimeout(function(){ heroVid.classList.add('fl-video-ready'); }, 2500);
 }
 /* ── Carrousel aperçu réel ── */
 (function(){
@@ -1077,10 +1079,6 @@ if(heroVid){
   if(modal)modal.addEventListener('click',function(e){if(e.target===modal)closeModal();});
   document.addEventListener('keydown',function(e){if(e.key==='Escape'&&modal&&modal.classList.contains('open'))closeModal();});
 })();
-
-/* popup de compra eliminado */
-.fl-buy-price-old{font-size:.5em;color:var(--body2);text-decoration:line-through;margin-right:6px;font-weight:600;vertical-align:baseline}
-.fl-buy-savings{display:inline-block;background:rgba(233,139,122,.16);color:#B5503F;font-size:14px;font-weight:800;padding:4px 10px;border-radius:8px;margin-left:8px;vertical-align:middle}
 
 /* ── Init ── */
 document.addEventListener('DOMContentLoaded',function(){
